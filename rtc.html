@@ -20,7 +20,110 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
+.topnav {
+  overflow: hidden;
+  background-color: rgb(4, 7, 168);
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  
+  color: white;
+}
+
+.topnav-right {
+  float: right;
+}
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+.btn {
+  border: 2px solid black;
+  background-color: #3955a0;
+  color: black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.success {
+  border-color: white;
+  color: white;
+}
+
+</style>
 </head>
 
 <body>
@@ -29,114 +132,313 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-       
-<nav  class="navbar navbar-light bg-light">
-   
-      <img src="rrtcc.png" width="30" height="30" class="d-inline-block align-top" alt="">
-      <h5 style="color: rgb(51, 16, 250); font-family: 'Nunito Sans', sans-serif;      ;
-      "> RESALA TRAINING CENTER</h5>
-      <nav id="navbar-example2" class="navbar navbar-light bg-light">
-        
-        <ul class="nav nav-pills">
-        
-          <li class="nav-item">
-            <a style="font-family: 'Nunito Sans', sans-serif;
-            " class="nav-link" href="#home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a style="font-family: 'Nunito Sans', sans-serif;
-            " class="nav-link" href="#about">About</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a style="font-family: 'Nunito Sans', sans-serif;
-            " class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-              aria-expanded="false">Sign in </a>
-            <div  class="dropdown-menu">
-              <a style="font-family: 'Nunito Sans', sans-serif;              ;
-              " class="dropdown-item" href="#">Trainer</a>
-              <a style="font-family: 'Nunito Sans', sans-serif;              ;
-              " class="dropdown-item" href="#">Trainee</a>
-              <div role="separator" class="dropdown-divider"></div>
-              <a style="font-family: 'Nunito Sans', sans-serif;
-              " class="dropdown-item" href="#">Organizer</a>
-            </div>
-          </li>
-        </ul>
-      </nav>
-      <div data-spy="scroll" data-target="#navbar-example2" class="scrollspy-example z-depth-1 mt-4" data-offset="0">
-        
-      </div>
-            </header>
-            <article id="home" style="background-color:rgb(253, 254, 254) ;">
-<main style="display: flex;justify-content: center; "  >
-    <div style="min-width: 98%;" id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img  src="yyyy.jpg" class="d-block w-100" alt="...">
-              </div>
-          <div class="carousel-item">
-            <img  src="hhhh.jpg" class="d-block w-100" alt="...">
-          </div>
-         
+      <div class="topnav">
+        <a  class="active">Resala Trainng Center</a>
+        <div class="topnav-right">
+          <li  >
+        <a  class="nav-link dropdown-toggle;background-color=black"   href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          تسجيل الدخول
+          <i class="fa fa-fw fa-user"></i> </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a href="Trainee.html" class="dropdown-item" style="color: rgb(0, 0, 0); " >سجل كمدرب</a>
+          <a  href="Trainee.html" class="dropdown-item" style="color: rgb(0, 0, 0);"> سجل كمتدرب</a>
+          <div class="dropdown-divider"></div>
+          <a  href="Trainee.html" class="dropdown-item" style="color: rgb(0, 0, 0);">سجل كمنظيم</a>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-</main>
-            </article>
-    <footer id="about" style="background-color:rgb(253, 254, 254) ;" class="page-footer font-small teal pt-4">
     
-      
-      <div class="container-fluid text-center text-md-left">
-    
-        <div class="row">
-    
-          <div class="col-md-6 mt-md-0 mt-3">
-   
-            <h5 style="text-align: center; color: rgb(82, 72, 177);" dir="rel" class="text-uppercase font-weight-bold">Resala Trainng Center </h5>
-            <h5 style="text-align: center;color: rgb(110, 99, 202); "  >مــــركز رســـالة للتدريب     </h5>
-            <p style="text-align:right; "  >
-                مراكز رساله للتدريب إحدى انشطة جميعة رسالة الذي بدأت منذ نشأتها عام 2000 و تستهدف تنمية شرائح المجتمع المختلفة من خلال تقديم الدورات التدريبية المجانية و فرص التطوع فى مجالات الكمبيوتر, اللغات, التنمية البشرية و الإدارية, و الأشبال تتميز مراكز رسالة للتدريب بتوفير فرص لتوظيف المتدربين بالتعاون مع كبرى شركات التدريب و التوظيف, كما تتيح فرص العمل التطوعي لديها مما يضيف لمتطوعينها خبرة العمل المؤسسي الذي يميزهم حين التقدم للعمل لدى مختلف الشركات لا يقتصر دور مراكز رسالة للتدريب على تأهيل متدربينها لسوق العمل من خلال الدورات التي تقدمها, و لكن تتميز بتأهيل مدربينها و أعضاء هيكلها لتقديم أفضل مستوى تطوعى , و ذلك بالتعاون مع شركات متخصصة مثل ميكروسوفت . و إستكمالا لدور مراكز رسالة للتدريب في نشر الوعي الأخلاقي و الإجتماعي و الثقافي بين أفراد المجتمع تم إفتتاح مكتبة رسالة العامة بفرع مصر الجديدة كوسيلة لنشر الوعي الثقافي جميع خدمات مراكز رسالة للتدريب التدريبية و الثقافية قائمة على متطوعين مدربين بكفاءة على أعمالهم لتقديم خدمة مميزة و بجودة عالية تستقبل مراكز رسالة للتدريب المتدربين و المتطوعين في 10 فرع على مستوى الــ محافظة يوميا من الساعة 2 ظهرا حتى 6 مساءا          </div>
-          <hr class="clearfix w-100 d-md-none pb-3">
-          <div class="col-md-6 mb-md-0 mb-3">
-            <h5 style="text-align: center; color: rgb(82, 72, 177);"  class="text-uppercase font-weight-bold">THE PLEASURE OF GIVING </h5>
-            <h5 style="text-align: center;color: rgb(110, 99, 202); "  > متعة العطاء </h5>
-
-            <p style="text-align:right;">
-                 يسعدنا إنضمامكم إلينا يمكنك التطوع الان عن طريق التوجه لأقرب فرع لكم وملأ إستمارة التطوع بالمقر او الموقع الذى من خلاله تختار النشاط المناسب لكم فى المواعيد التى تناسبكم </p>
-                 
-                 <a style="float: right;"  href="https://resala.org/branches/"> ولمعرفة أقرب فرع او ارقام الفروع </a>
-
-               
-
-
-          </div>
+          <a href="#content"> التواصل مع اقرب فرع <i class="fa fa-fw fa-envelope"></i> </a>
+          <a href="#about">RTC عن <i class="fa fa-fw fa-globe "></i> </a>
+          <a href="#home">الصفحة الرئيسية<i class="fa fa-fw fa-home"></i> </a>
           
-    
         </div>
-        
-    
       </div>
-    
-      <div class="footer-copyright text-center py-3">© 2020 RESALA TRAINING CENTER:
-        <a href="https://www.facebook.com/RTCPage/">RTC Page </a>
+   </header>
+
+   <article  id="home" style="background-color:rgb(253, 254, 254) ;" >
+<main style="display: flex;justify-content: center; "   >
+  <div style="min-width: 99%;" id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div   class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="yyyy.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="hhhh.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="yyyy.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</main>
+   </article>
+   <main id="about" style="background-color:rgb(253, 254, 254) ;" class="page-footer font-small teal pt-4" >
+    <div class="container-fluid text-center text-md-left">
+  
+      <div class="row">
+  
+        <div class="col-md-6 mt-md-0 mt-3">
+ 
+          <h5 style="text-align: center; color: rgb(82, 72, 177);" dir="rel" class="text-uppercase font-weight-bold">THE PLEASURE OF GIVING </h5>
+          <h5 style="text-align: center;color: rgb(110, 99, 202); "  >متعة العطاء
+          </h5>
+          <p style="text-align:right; "  >
+      
+            يسعدنا إنضمامكم إلينا  لإن متطوعينا سر نجاحنا وإن كل متطوع عندنا بيشتغل جوة منظومة بتكمل بعضها وكل دور لا يغني عن الآخر    
+          </p>
+          <p style="text-align: right;">
+       ولأن أساس كل عمل هو النظام فلجنة التنظيم عندنا ليها دور كبير جدآ وتعتبر هي عمود النشاط مسؤله عن ترتيب المواعيد و الإتصال بالمدربين والمتدربين وتنظيم الكورسات واحتياجات المدربين و المتدربين  
+           متطوع التنظيم لازم يكون عنده الإحساس بالمسؤليه قادر يتحمل أي ضغط دا غير مهاره العمل الجماعي  
+           يمكنك التطوع الان عن طريق التوجه لأقرب فرع لكم وملأ إستمارة التطوع بالمقر أو ملأ إستمارة اونلاين 
+          </p>        
+          <p style="text-align: right;" >
+            لو شايف أنك شخص مميز قادر على تحمل المسؤلية وحابب تاخد خبرة تساعدك بعد كده في شغلك وتقدر تنضم لمنظومتنا ممكن تنضم لينا من خلال أنك تسجل  وهايتم التواصل معاك في أقرب وقت ممكن لعمل الأنترفيو
+          </p>
+        <p style="text-align: center;" > <a  href="https://forms.gle/8xvvMvXbY2oS9mWy5
+         " target="blank"  >
+          <button class="btn success ;" >ملأ استمارة التطوع التنظيم الألكترونية</button>
+         </a>
+        </p>
+        
+         <p style="text-align: center;"  >
+            ولو عندك مادة علمية تقدر تفيد بيها غيرك تقدر تسجل بياناتك هنا 
+          </p  >
+         </h5>
+         <p  style="text-align: center;"  >
+          <a href="https://forms.gle/1AYCL7SfuX8hr78z9
+          " target="blank" >
+          <button class="btn success">ملأ استمارة التطوع التدريب الألكترونية</button>
+          </a>
+         </p>
+          </div>
+        <hr class="clearfix w-90 d-md-none pb-4">
+        <div class="col-md-6 mb-md-0 mb-3">
+          <h5 style="text-align: center; color: rgb(82, 72, 177);"  class="text-uppercase font-weight-bold">RESALA TRAINNG CENTER </h5>
+          <h5 style="text-align: center;color: rgb(110, 99, 202); "  > مــــركز رســـالة للتدريب</h5>
+
+          <p style="text-align:right;">
+            مراكز رساله للتدريب إحدى انشطة جميعة رسالة الذي بدأت منذ نشأتها عام 2000 و تستهدف تنمية شرائح المجتمع المختلفة من خلال تقديم الدورات التدريبية المجانية و فرص التطوع فى مجالات الكمبيوتر, اللغات, التنمية البشرية و الإدارية, و الأشبال تتميز مراكز رسالة للتدريب بتوفير فرص لتوظيف المتدربين بالتعاون مع كبرى شركات التدريب و التوظيف, كما تتيح فرص العمل التطوعي لديها مما يضيف لمتطوعينها خبرة العمل المؤسسي الذي يميزهم حين التقدم للعمل لدى مختلف الشركات لا يقتصر دور مراكز رسالة للتدريب على تأهيل متدربينها لسوق العمل من خلال الدورات التي تقدمها, و لكن تتميز بتأهيل مدربينها و أعضاء هيكلها لتقديم أفضل مستوى تطوعى , و ذلك بالتعاون مع شركات متخصصة مثل ميكروسوفت . و إستكمالا لدور مراكز رسالة للتدريب في نشر الوعي الأخلاقي و الإجتماعي و الثقافي بين أفراد المجتمع تم إفتتاح مكتبة رسالة العامة بفرع مصر الجديدة كوسيلة لنشر الوعي الثقافي جميع خدمات مراكز رسالة للتدريب التدريبية و الثقافية قائمة على متطوعين مدربين بكفاءة على أعمالهم لتقديم خدمة مميزة و بجودة عالية تستقبل مراكز رسالة للتدريب المتدربين و المتطوعين في 10 فرع على مستوى الــ محافظة يوميا من الساعة 2 ظهرا حتى 6 مساءا      
+              </div>
+   </main>
+   <hr style="background-color: #c0bfbf; height: 3px; border: 1px;" > 
+
+<main>
+   <h4 style="text-align: center;text-align: center;color: rgb(54, 42, 165); "  id="content"  > لتواصل مع اقرب فرع </h4>
+  
+</main>
+<main style="width: 98.5%;" >
+  <div class="card-group">
+    <div class="card">
+      
+      <div class="card-body">
+        <h5 class="card-title"> RTC Giza</h5>
+        <p class="card-text">العنوان : عمارات نصر الدين، عماره الروان، الدور الثالث
+        </p>
+      </div>
+      <div class="card-footer">
+        <a href="https://www.facebook.com/RTCHaram/
+          " target="blank" >
+          <button class="btn success">لتواصل فيس بوك</button>
+          </a>
+          <a href="https://wa.me/01127518246‏"
+          " target="blank" >
+          <button class="btn success">لتواصل واتساب</button>
+          </a>
+      </div>
+    </div>
+    <div class="card">
+     
+      <div class="card-body">
+        <h5 class="card-title"> RTC Faisal</h5>
+        <p class="card-text">العنوان : محطة الطوابق، شارع فيصل، أمام بنزينة بي تك
+        </p>
+      </div>
+      <div class="card-footer">
+        <a href="https://www.facebook.com/RTCFaisal/
+          " target="blank" >
+          <button class="btn success">لتواصل فيس بوك</button>
+          </a>
+          <a href="https://wa.me/01102602563
+          " target="blank" >
+          <button class="btn success">لتواصل واتساب</button>
+          </a>
+      </div>
+    </div>
+    <div class="card">
+     
+      <div class="card-body">
+        <h5 class="card-title">RTC Mohandseen</h5>
+        <p class="card-text">العنوان : 11 ش مصدق امام مستشفي ابن سينا
+        </p>
+      </div>
+      <div class="card-footer">
+        <a href="https://www.facebook.com/RTC.Mohandseen/
+          " target="blank" >
+          <button class="btn success">لتواصل فيس بوك</button>
+          </a>
+          <a href="https://wa.me/01116185031
+          " target="blank" >
+          <button class="btn success">لتواصل واتساب</button>
+          </a>
+      </div>
+    </div>
+  </div>
+  <div class="card-group">
+    <div class="card">
+      
+      <div class="card-body">
+        <h5 class="card-title"> RTC Maadi</h5>
+        <p class="card-text">العنوان  :تقسيم الاسلكى،أمام مؤمن وخلف مقهى تيتانيك
+        </p>
+      </div>
+      <div class="card-footer">
+        <a href="https://www.facebook.com/RTCMaadi/
+          " target="blank" >
+          <button class="btn success">لتواصل فيس بوك</button>
+          </a>
+          <a href="https://wa.me/01099116706
+          " target="blank" >
+          <button class="btn success">لتواصل واتساب</button>
+          </a>
+      </div>
+    </div>
+    <div class="card">
+     
+      <div class="card-body">
+        <h5 class="card-title"> RTC October </h5>
+        <p class="card-text">العنوان : الحى السابع / ميدان ماجدة / امام حديقة الحصرى
+        </p>
+      </div>
+      <div class="card-footer">
+        <a href="https://www.facebook.com/rtcoctobercity/
+        " target="blank" >
+        <button class="btn success">لتواصل فيس بوك</button>
+        </a>
+        <a href="https://wa.me/01001552939
+        " target="blank" >
+        <button class="btn success">لتواصل واتساب</button>
+        </a>
+      </div>
+    </div>
+    <div class="card">
+     
+      <div class="card-body">
+        <h5 class="card-title">RTC Misr</h5>
+        <p class="card-text">العنوان  : 9 ش أحمد عبد الخالق من ش الحجاز خلف سيتى بنك
+        </p>
+      </div>
+      <div class="card-footer">
+        <a href="https://www.facebook.com/RTCHeliopolis/
+        " target="blank" >
+        <button class="btn success">لتواصل فيس بوك</button>
+        </a>
+        <a href="https://wa.me/01019982219
+        " target="blank" >
+        <button class="btn success">لتواصل واتساب</button>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="card-group">
+    <div class="card">
+      
+      <div class="card-body">
+        <h5 class="card-title"> RTC Helwan</h5>
+        <p class="card-text">العنوان : 16أ شارع يوسف زكى – أمام رئاسة الحى
+        </p>
+      </div>
+      <div class="card-footer">
+        <a href="https://www.facebook.com/RTC.Helwan.RTC/
+          " target="blank" >
+          <button class="btn success">لتواصل فيس بوك</button>
+          </a>
+          <a href="https://wa.me/01090011584
+          " target="blank" >
+          <button class="btn success">لتواصل واتساب</button>
+          </a>
+      </div>
+    </div>
+    <div class="card">
+     
+      <div class="card-body">
+        <h5 class="card-title">RTC Nasr City</h5>
+        <p class="card-text">العنوان :4 شارع زكى رستم من شارع حسنين هيكل (تقاطع شارع عباس العقاد مع شارع السنهورى)
+        </p>
+      </div>
+      <div class="card-footer">
+        <a href="https://www.facebook.com/RTC.Nasrcity/
+        " target="blank" >
+        <button class="btn success">لتواصل فيس بوك</button>
+        </a>
+        <a href="https://wa.me/01115997937
+        " target="blank" >
+        <button class="btn success">لتواصل واتساب</button>
+        </a>
+      </div>
+    </div>
+    <div class="card">
+     
+      <div class="card-body">
+        <h5 class="card-title">RTC Mokatam</h5>
+        <p class="card-text">العنوان  : نهايه ش 9 خلف موقف الاتوبيس علي طريق المقطم المتجه الي مدينه نصر الهضبه الوسطي
+        </p>
+      </div>
+      <div class="card-footer">
+        <a href="https://www.facebook.com/RTCmokatam/
+          " target="blank" >
+          <button class="btn success">لتواصل فيس بوك</button>
+          </a>
+          <a href="https://wa.me/01007894469
+          " target="blank" >
+          <button class="btn success">لتواصل واتساب</button>
+          </a>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"> RTC Alex </h5>
+          <p class="card-text">العنوان : 44 ش توت عنخ أمون، سموحة، بجوار كوبرى كيلوباترا ومترو ماركت
+          </p>
+         <a href="https://www.facebook.com/RTCAlex/
+          " target="blank" >
+          <button class="btn success">لتواصل فيس بوك</button>
+          </a>
+          <a href="https://wa.me/01270724812
+          " target="blank" >
+          <button class="btn success">لتواصل واتساب</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">RTC مراكز رسالة للتدريب
+          </h5>
+          <p class="card-text">RTCPage</p>
+          <a href="https://www.facebook.com/RTCPage/
+          " target="blank" >
+          <button class="btn success">لتواصل فيس بوك</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    <footer >     <div class="footer-copyright text-center py-3">© 2020 RESALA TRAINING CENTER
       </div>
       
     </footer>
-  
- 
-       
-        
-          
+           
 </body>
-
-
-
 </html>
