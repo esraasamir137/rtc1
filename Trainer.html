@@ -29,7 +29,7 @@ body {
 
 .topnav {
   overflow: hidden;
-  background-color: rgb(4, 7, 168);
+  background-color: rgb(41, 6, 194);
 }
 
 .topnav a {
@@ -42,7 +42,7 @@ body {
 }
 
 .topnav a:hover {
-  background-color: #ddd;
+  background-color:  rgb(16, 27, 177);
   color: black;
 }
 
@@ -111,7 +111,7 @@ html {
 }
 .btn {
   border: 2px solid black;
-  background-color: #3955a0;
+  background-color: rgb(41, 6, 194);
   color: black;
   padding: 14px 28px;
   font-size: 16px;
@@ -140,47 +140,39 @@ html {
        </div>
      </div>
   </header>
-<!-- Default form login -->
 <form class="text-center border border-light p-5" action="#!">
 
-  <p class="h4 mb-4"> انشاء حساب  </p>
+  <p class="h4 mb-4" style="color: rgb(110, 99, 202);" >أنشاء حساب لأول مره </p>
 
-      <div>
+  <input type="text" id="defaultContactFormName" class="form-control mb-4" placeholder="الأسم رباعي بالأنجليش" required>
+  <input type="email" id="defaultContactFormEmail" class="form-control mb-4" placeholder="الأيميل"required  >
+  <input type="tel" id="defaultContactFormtel" class="form-control mb-4" placeholder="الرقم القومي "required >
+  <input type="tel" id="defaultContactFormtel" class="form-control mb-4" placeholder="رقم الهاتف"required  >
+  <input type="tel" id="defaultContactFormtel" class="form-control mb-4" placeholder="رقم الواتساب" required >
+  <input type="Name" id="defaultContactFormName" class="form-control mb-4" placeholder="اسم الجامعة / اسم الكلية"required  >
+  <select required style="margin-bottom: 20px;" class="form-control">
+    <option value="" >تسجيل الدخول ك </option>
+    <option > مدرب </option>
+    <option  > متدرب </option>
+    <option  > منظم </option>
 
 
-  <input type="text" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="يجب كتابة الأسم رباعي بالأنجليش" required >
+  </select>
+  
+  <input  type="Name" id="defaultContactFormName" class="form-control mb-4" placeholder="اذا كونت مدرب ما هو التخصص التدريبي">
+  <input type="Name" id="defaultContactFormName" class="form-control mb-4" placeholder="اذا كونت منظم ما  هي لجنتك / اسم الفرع التابع له ">
 
-<div class="d-flex justify-content-around">
-<div>
+  
 
-  <input style="width:985px;" type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="الأيميل" required>
-  <div class="d-flex justify-content-around">
-      <div>
-        <input style="width:985px; " type="tel" class="form-control mb-4" placeholder="رقم القومي" maxlength="14" required >
-        <div class="d-flex justify-content-around">
-            <div>
+
+  <button class="btn btn success btn-block" type="submit" >إنشاء الحساب</button>
+  <a href="Trainee.html"
    
-
-        <input style="width:985px;" type="tel"  class="form-control mb-4" placeholder="رقم الواتساب"required >
-        <div class="d-flex justify-content-around">
-            <div>
-
-              <input style="width:985px;" type="text" class="form-control mb-4" placeholder="من اي  دولة" required>
-              <div class="d-flex justify-content-around">
-                  <div>  
-                    <input style="width:985px;" type="rel" class="form-control mb-4" placeholder="ما العمر" minlength="8"required >
-                    <div class="d-flex justify-content-around">
-                        <div>            
-                          <input style="width:985px;" type="rel" class="form-control mb-4" placeholder="اذا كونت منظم ما هي اللجنة التابع اليها ">
-                          <div class="d-flex justify-content-around">
-                              <div>
-                                <input style="width:985px;" type="rel" class="form-control mb-4" placeholder="اذا كونت مدرب ما هو مجالك التدريبي" >
-                                <div class="d-flex justify-content-around">
-                                    <div>          
- <!-- Sign in button -->
- <button style="background-color:#3955a0 !important;" class="btn btn-info btn-block my-4" type="submit"> انشاء الحساب </button>
-
+      <button class="btn btn success btn-block"   >تسجيل دخول</button>
+      </a>  
+     
 </form>
+
 <footer >     <div class="footer-copyright text-center py-3">© 2020 RESALA TRAINING CENTER
 </div>
 
