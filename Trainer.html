@@ -141,7 +141,7 @@ html {
        </div>
      </div>
   </header>
-<form class="text-center border border-light p-5" action="#!">
+<form class="text-center border border-light p-5">
 
   <p class="h4 mb-4" style="color: rgb(110, 99, 202);" >أنشاء حساب لأول مره </p>
 
@@ -166,7 +166,7 @@ html {
   
 
 
-  <button class="btn btn success btn-block" type="submit" id="bt" >إنشاء الحساب</button>
+  <button class="btn btn success btn-block" type="submit" id="btn" >إنشاء الحساب</button>
   <a href="Trainee.html"
    
       <button class="btn btn success btn-block"   >تسجيل دخول</button>
@@ -181,10 +181,9 @@ html {
 
 <script>
     
-  document.getElementById("bt").addEventListener("click",doStuff);
-  
+  document.getElementById("btn").addEventListener("click",doStuff);
   function doStuff(){
-  
+    
      var name= document.getElementById("userName").value;
      var email= document.getElementById("email").value;
      var tel1= document.getElementById("id").value;
