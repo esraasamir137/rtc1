@@ -151,8 +151,8 @@ html {
   <input type="tel" id="defaultContactFormtel" class="form-control mb-4" placeholder="رقم الهاتف" id="fon" required  >
   <input type="tel" id="defaultContactFormtel" class="form-control mb-4" placeholder="رقم الواتساب" id="tel" required >
   <input type="Name" id="defaultContactFormName" class="form-control mb-4" placeholder="اسم الجامعة / اسم الكلية" id="tt" required  >
-  <select required style="margin-bottom: 20px;" class="form-control">
-    <option value="" id="ll" >تسجيل الدخول ك </option>
+  <select required style="margin-bottom: 20px;" class="form-control" id="ll" >
+    <option value=""  >تسجيل الدخول ك </option>
     <option > مدرب </option>
     <option  > متدرب </option>
     <option  > منظم </option>
@@ -183,15 +183,15 @@ html {
     
   document.getElementById("btn").addEventListener("click",doStuff);
   function doStuff(){
-    
-     var name= document.getElementById("userName").value;
-     var email= document.getElementById("email").value;
-     var tel1= document.getElementById("id").value;
-     var tel2= document.getElementById("fon").value;
-     var tel3= document.getElementById("tt").value;
-     var tel4= document.getElementById("gg").value;
-     var tel5= document.getElementById("pp").value;
-     var tel6= document.getElementById("ll").value;
+    var userinfo ={};
+    userinfo.name= document.getElementById("userName").value;
+    userinfo.email= document.getElementById("email").value;
+    userinfo.tel1= document.getElementById("id").value;
+    userinfo.tel2= document.getElementById("fon").value;
+    userinfo.tel3= document.getElementById("tt").value;
+    userinfo.tel4= document.getElementById("gg").value;
+    userinfo.tel5= document.getElementById("pp").value;
+    userinfo.tel6= document.getElementById("ll").value;
 
 
 
