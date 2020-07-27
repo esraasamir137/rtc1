@@ -14,6 +14,7 @@
      <title> RESALA TRAINING CENTER </title>
      <meta name="description" content="مراكز تدريبيه تابعه لجمعيه رساله للاعمال الخيريه مسؤله عن تقديم كورسات مجانيه فى جميع المجالات ( كمبيوتر – لغات- تنميه بشريه_ وغيرها ) متاحه للجميع وذلك بجهود تطوعية
 "/>
+<script src="rtcc.js"></script>
 <meta name="key words" content="كورسات مجانية , كورسات أونلاين مجانا"/>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css2?family=Diplomata+SC&display=swap" rel="stylesheet">
@@ -144,14 +145,14 @@ html {
 
   <p class="h4 mb-4" style="color: rgb(110, 99, 202);" >أنشاء حساب لأول مره </p>
 
-  <input type="text" id="defaultContactFormName" class="form-control mb-4" placeholder="الأسم رباعي بالأنجليش" required>
-  <input type="email" id="defaultContactFormEmail" class="form-control mb-4" placeholder="الأيميل"required  >
-  <input type="tel" id="defaultContactFormtel" class="form-control mb-4" placeholder="الرقم القومي "required >
-  <input type="tel" id="defaultContactFormtel" class="form-control mb-4" placeholder="رقم الهاتف"required  >
-  <input type="tel" id="defaultContactFormtel" class="form-control mb-4" placeholder="رقم الواتساب" required >
-  <input type="Name" id="defaultContactFormName" class="form-control mb-4" placeholder="اسم الجامعة / اسم الكلية"required  >
+  <input type="text" id="defaultContactFormName" class="form-control mb-4" placeholder="الأسم رباعي بالأنجليش"id="userName"  required>
+  <input type="email" id="defaultContactFormEmail" class="form-control mb-4" placeholder="الأيميل" id="email" required  >
+  <input type="tel" id="defaultContactFormtel" class="form-control mb-4" placeholder="الرقم القومي " id="id" required >
+  <input type="tel" id="defaultContactFormtel" class="form-control mb-4" placeholder="رقم الهاتف" id="fon" required  >
+  <input type="tel" id="defaultContactFormtel" class="form-control mb-4" placeholder="رقم الواتساب" id="tel" required >
+  <input type="Name" id="defaultContactFormName" class="form-control mb-4" placeholder="اسم الجامعة / اسم الكلية" id="tt" required  >
   <select required style="margin-bottom: 20px;" class="form-control">
-    <option value="" >تسجيل الدخول ك </option>
+    <option value="" id="ll" >تسجيل الدخول ك </option>
     <option > مدرب </option>
     <option  > متدرب </option>
     <option  > منظم </option>
@@ -159,13 +160,13 @@ html {
 
   </select>
   
-  <input  type="Name" id="defaultContactFormName" class="form-control mb-4" placeholder="اذا كونت مدرب ما هو التخصص التدريبي">
-  <input type="Name" id="defaultContactFormName" class="form-control mb-4" placeholder="اذا كونت منظم ما  هي لجنتك / اسم الفرع التابع له ">
+  <input  type="Name" id="defaultContactFormName" class="form-control mb-4" placeholder="اذا كونت مدرب ما هو التخصص التدريبي" id="gg" >
+  <input type="Name" id="defaultContactFormName" class="form-control mb-4" placeholder="اذا كونت منظم ما  هي لجنتك / اسم الفرع التابع له " id="pp" >
 
   
 
 
-  <button class="btn btn success btn-block" type="submit" >إنشاء الحساب</button>
+  <button class="btn btn success btn-block" type="submit" id="bt" >إنشاء الحساب</button>
   <a href="Trainee.html"
    
       <button class="btn btn success btn-block"   >تسجيل دخول</button>
@@ -177,3 +178,35 @@ html {
 </div>
 
 </footer>
+
+<script>
+    
+  document.getElementById("bt").addEventListener("click",doStuff);
+  
+  function doStuff(){
+  
+     var name= document.getElementById("userName").value;
+     var email= document.getElementById("email").value;
+     var tel1= document.getElementById("id").value;
+     var tel2= document.getElementById("fon").value;
+     var tel3= document.getElementById("tt").value;
+     var tel4= document.getElementById("gg").value;
+     var tel5= document.getElementById("pp").value;
+     var tel6= document.getElementById("ll").value;
+
+
+
+      google.script.run.userClicked(name,email,tel1,tel2,tel3,tel4,tel5,tel6);
+     document.getElementById("userName").value="";
+     document.getElementById("email").value="";
+     document.getElementById("id").value="";
+     document.getElementById("fon").value=""; 
+      document.getElementById("tt").value="";
+     document.getElementById("gg").value="";
+     document.getElementById("pp").value="";
+     document.getElementById("ll").value="";
+  }
+  </script>
+
+</body>
+</html>
